@@ -23,8 +23,8 @@
             "id":, # id опроса (int)
             "name":, # название опроса (str)
             "description":, # описание опроса (str)
-            "start":, # дата начала опроса (str)
-            "stop": , # дата окончания (str)
+            "start":, # дата начала опроса (str формат YYYY-MM-DDThh:mm)
+            "stop": , # дата окончания (str формат YYYY-MM-DDThh:mm)
             "questions": [
                     "id":, # id вопроса в опросе (int)  
                     ---
@@ -53,8 +53,8 @@
     "id":, # id опроса (int)
     "name":, # название опроса (str)
     "description":, # описание опроса (str)
-    "start":, # дата начала опроса (date)
-    "stop":, # дата окончания (date)
+    "start":, # дата начала опроса (str формат YYYY-MM-DDThh:mm)
+    "stop":, # дата окончания (str формат YYYY-MM-DDThh:mm)
     "questions": [
         {
             id # id вопроса в опросе (int) 
@@ -78,8 +78,8 @@
     "id":, # id опроса (int)
     "name":, # название опроса (str)
     "description":, # описание опроса (str)
-    "start":, # дата начала опроса (date)
-    "stop": , # дата окончания (date)
+    "start":, # дата начала опроса (str формат YYYY-MM-DDThh:mm)
+    "stop": , # дата окончания (str формат YYYY-MM-DDThh:mm)
     "questions": [
             id # id вопроса в опросе (int)  
             ---
@@ -153,8 +153,8 @@
             "id":, # id опроса (int)
             "name":, # название опроса (str)
             "description":, # описание опроса (str)
-            "start":, # дата начала опроса (date)
-            "stop":, # дата окончания (date)
+            "start":, # дата начала опроса (str формат YYYY-MM-DDThh:mm)
+            "stop":, # дата окончания (str формат YYYY-MM-DDThh:mm)
             "questions":[
                 id # id вопроса в опросе
                 ---
@@ -174,8 +174,8 @@
     "id":, # id опроса (int)
     "name":, # название опроса (str)
     "description":, # описание опроса (str)
-    "start":, # дата начала опроса (date)
-    "stop":, # дата окончания (date)
+    "start":, # дата начала опроса (str формат YYYY-MM-DDThh:mm)
+    "stop":, # дата окончания (str формат YYYY-MM-DDThh:mm)
     "questions":[
         {
             "id": ,  # id вопроса
@@ -221,7 +221,7 @@
             "id":, # id пройденного опроса (int)
             "user_id":, # id пользователя (int)
             "survey":, # id опрос (int)
-            "date_end":, # время окончания пройденного опроса (str)
+            "date_end":, # время окончания пройденного опроса (str формат YYYY-MM-DDThh:mm)
             "answer_question": [
                 {
                     "question": {
