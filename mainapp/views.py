@@ -8,7 +8,8 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.viewsets import ModelViewSet
 from .models import Survey, Question, AnswerQuestion, Answer
-from .serializers import SurveyListSerializer, QuestionSerializer, SurveyUserSerializer, AnswerSerializer
+from .serializers import SurveyListSerializer, QuestionSerializer, SurveyUserSerializer, AnswerSerializer, \
+    SurveyDetailSerializer
 
 
 class IsAdminPermissions(permissions.BasePermission):
@@ -37,7 +38,7 @@ class SurveyUserView(ListAPIView, RetrieveAPIView):
 
 
 class SurveyDetailView(RetrieveAPIView):
-    serializer_class = SurveyListSerializer
+    serializer_class = SurveyDetailSerializer
 
     def get_queryset(self):
         queryset = Survey.objects.filter(stop__gte=timezone.now())

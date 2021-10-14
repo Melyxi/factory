@@ -4,8 +4,8 @@ from django.db import models
 
 class Question(models.Model):
     """Вопросы в вопроснике"""
-    Text = 'text'
-    OneAnswer = 'OneAnswer'
+    Text = "text"
+    OneAnswer = "OneAnswer"
     ManyAnswer = "ManyAnswer"
 
     ROLE_CHOICES = (
@@ -26,7 +26,7 @@ class Survey(models.Model):
     name = models.CharField(verbose_name='Наименование опроса', max_length=150)
     description = models.CharField(verbose_name='Описание', max_length=300, blank=True)
     start = models.DateTimeField(verbose_name='Создан', auto_now_add=True)
-    stop = models.DateTimeField(verbose_name='Закончен', null=True, blank=True)
+    stop = models.DateTimeField(verbose_name='Окончание', null=True, blank=True)
     questions = models.ManyToManyField(Question, blank=True, related_name='questions')
 
     def __str__(self):

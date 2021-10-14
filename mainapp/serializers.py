@@ -8,9 +8,15 @@ class QuestionSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
-class SurveyListSerializer(serializers.ModelSerializer):
-    questions = QuestionSerializer(many=True)
+class SurveyDetailSerializer(serializers.ModelSerializer):
+    questions = QuestionSerializer(many=True, read_only=True)
 
+    class Meta:
+        model = Survey
+        fields = ('id', "name", 'description', 'start', 'stop', 'questions')
+
+
+class SurveyListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Survey
         fields = ('id', "name", 'description', 'start', 'stop', 'questions')
